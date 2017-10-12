@@ -1,0 +1,11 @@
+<div align="center">REgister</div>
+<br/>
+<form align="center">
+    Username: <input type="text" [(ngModel)]="user.username" name="username"><br>
+    Password: <input type="password" [(ngModel)]="user.password" name="password"><br>
+    Confirm Password: <input type="password" [(ngModel)]="confirmedPassword" name="confirmedPassword"><br>
+   <button (click)="register()" [disabled]="isInvalidPassword()" value="Submit" type="submit">Submit</button>
+   <label [hidden]="!isInvalidPassword()">Invalid Password</label>
+     <label [hidden]="!isDuplicateName">Duplicat or Empty Name</label>
+     <button (click)="logout()" value="Submit" type="submit">Back</button>
+  </form>
